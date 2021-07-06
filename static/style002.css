@@ -1,0 +1,12 @@
+body{
+    margin: 0px;
+    background-color: blue;
+}
+main{
+    margin: 50px auto;
+}
+
+h1{
+    text-align: center;
+    color: yellow;
+}
