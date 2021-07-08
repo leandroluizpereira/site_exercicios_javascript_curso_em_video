@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style002.css">
+    <title>Exercicio : 013</title>
+</head>
+<style>
+
+ main{
+     margin: auto;
+     width: 500px;
+ }
+ p,h3{
+     color: white;
+ }
+ 
+
+</style>
+
+
+
+<body>
+    <main>
+     
+  <h1>Exercicio : 013 - console.log</h1>
+
+   
+    </main>
+
+    <script>
+     var agora = new Date();
+     var dia = agora.getDay();
+/*0 - Domingo
+  1 - Segunda 
+  2 - TEERÇA
+  3 - Quarta
+  4 - Quinta
+  5 - Sexta 
+  6 - Sabado
+  */
+
+     console.log(dia);
+
+     swicth(dia){
+         case 0 :
+             console.log("Domingo");
+             break;
+             case 1 :
+             console.log("Segunda");
+             break;
+             case 2 :
+             console.log("tERÇA");
+             break;
+             case 3 :
+             console.log("QUARTA");
+             break;
+             case 4 :
+             console.log("QUINTA");
+             break;
+             case 5 :
+             console.log("SEXTA");
+             break;
+             case 6 :
+             console.log("SABADO");
+             break;
+             default:
+                 console.log("Dia invalido");
+    
+     }
+       
+    </script>
+</body>
+</html>
