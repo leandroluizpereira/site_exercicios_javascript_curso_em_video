@@ -54,7 +54,7 @@ div#foto{
 
 <body onload="carregar();">
   <header>
-      <h1>Titulo</h1>
+      <h1 id="text">Execicio : 14</h1>
   </header>
 
   <section>
@@ -79,19 +79,23 @@ div#foto{
    
       function carregar(){
           var msg = window.document.getElementById('msg');
+          var text = window.document.getElementById("text");
           var img = window.document.getElementById("imagem");
           var data = new Date();
           var hora = data.getHours();
           msg.innerHTML = " Agora são "+hora+" horas";
           if (hora >=0 && hora < 12){
               img.src='static/imagem/manha.webp';
-              document.body.style.backgroundColor="blue"
+              document.body.style.backgroundColor="blue";
           }
           else if(hora >=12 && hora <= 18 ){
             img.src='static/imagem/tarde.webp';
+             text.style.color="white";
+            document.body.style.backgroundColor="yellow";
           }
           else{
             img.src='static/imagem/noite.webp';
+            document.body.style.backgroundColor="black";
           }
       }
   </script>
