@@ -33,6 +33,18 @@ color: white;
 text-align: center;
 font-style: italic;
 }
+img{
+   
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+div#foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
 
  
 
@@ -40,25 +52,51 @@ font-style: italic;
 
 
 
-<body>
+<body onload="carregar();">
   <header>
       <h1>Titulo</h1>
   </header>
 
   <section>
-      <div>
+      <div id="msg">
         testando ...
       </div>
-      <div>
-         Olá 
+      <div id="foto">
+         <img id="imagem" src="static/imagem/manha.webp" alt="foto do dia">
       </div>
   </section>
   <footer>
       <p>&copy; curso em video</p>
   </footer>
 
+
+
+
+
+
+
   <script>
-      alert("Olá");
+   
+      function carregar(){
+          var msg = window.document.getElementById('msg');
+          var img = window.document.getElementById("imagem");
+          var data = new Date();
+          var hora = data.getHours();
+          msg.innerHTML = " Agora são "+hora+" horas";
+          if (hora >=0 && hora < 12){
+              img.src='static/imagem/manha.webp';
+              document.body.style.backgroundColor="blue"
+          }
+          else if(hora >=12 && hora <= 18 ){
+            img.src='static/imagem/tarde.webp';
+          }
+          else{
+            img.src='static/imagem/noite.webp';
+          }
+      }
   </script>
+
+
+
 </body>
 </html>
