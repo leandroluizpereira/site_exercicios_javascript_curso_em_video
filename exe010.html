@@ -13,6 +13,10 @@
      margin: auto;
      width: 500px;
  }
+ p,h3{
+     color: white;
+ }
+ 
 
 </style>
 
@@ -24,6 +28,8 @@
        <h3>velocidade do carro:</h3> <input type="number" name="txtvel" id="txtvel">
        <input type="button" value="verificar" onclick="calcular();">
        <div id="res"></div>
+
+
    
     </main>
 
@@ -31,7 +37,7 @@
       
        function calcular(){
         var txtv = window.document.getElementById('txtvel');
-        var res = window.document.querySelector('div#res')
+        var res = window.document.querySelector('div#res');
         var vel = Number(txtv.value);
         res.innerHTML="<p>sua velocidade atual e de <strong>"+vel+"</strong></p>";
         if (vel > 60){
