@@ -58,13 +58,13 @@ div#foto{
   </header>
 
   <section>
-      <div id="msg">
-       <p>Ano de nascimento:
+      <div >
+       <p>Ano de Nascimento:
        <input type="number" name ="txtano" id="txtano" min="0"></p>
 
        <p> Sexo:
          <input type="radio" name ="radsex" id="mas" checked>
-         <label form="masc">masculino</label>
+         <label form="mas">masculino</label>
          <input type="radio" name ="radsex" id="fem">
          <label for="fem">Feminino</label>
 
@@ -75,7 +75,7 @@ div#foto{
       </div>
       <div id="res">
         Preencha os dados acima para ver o reultado
-         
+          !
       </div>
   </section>
   <footer>
@@ -95,21 +95,42 @@ div#foto{
      var ano = data.getFullYear();
      var fano = document.getElementById('txtano');
      var res = document.getElementById('res');
-     if (fano.value.lenght == 0|| fano.value > ano){
-       window.alert("[erro] verifique os dados e teste noamente")
+     if (fano.value.length == 0|| Number(fano.value) > ano){
+       window.alert("[erro] verifique os dados e teste novamente")
      }else{
        var fsex = document.getElementsByName('radsex');
        var idade = ano - Number(fano.value);
-       res.innerHTML ='idade calculado: "+idade+"';
+     
        var genero = '';
+       var img = document.createElement('img');
+       img.setAttribute('id','foto');
        if(fsex[0].checked){
          genero = 'Homem';
+         if (idade >0 && idade <10){
+           img.setAttribute('src','static-imagem-bebe.webp');
+
+         }
+         else if (idade <21){
+          img.setAttribute('src','static-imagem-bebe.webp');
+         }
+         else {
+          img.setAttribute('src','static-imagem-bebe.webp');
+         }
 
        }else if(fsex[1].checked){
          genero ="mulher";
+         if (idade >0 && idade <10){
+          img.setAttribute('src','static-imagem-bebe.webp');
+        }
+        else if (idade <21){
+          img.setAttribute('src','static-imagem-bebe.webp');
+          }
+          else {
+            img.setAttribute('src','static-imagem-bebe.webp');
+          }
        }
        res.style.textAlign="center";
-       res.innerHTML ="detectamos = "+genero+"  com "+idade+" anos";
+       res.innerHTML ="Detectamos  "+genero+"  com "+idade+" anos .";
      }
     }
   </script>
