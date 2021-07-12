@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style002.css">
+    <title>Exercicio : 020</title>
+</head>
+<style>
+
+body{
+  background-color: rgb(107, 107, 241);
+  font: Normal 15 pt Arial;
+
+}
+header{
+color: white;
+text-align: center;
+}
+section{
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.426);
+    
+
+}
+footer{
+color: white;
+text-align: center;
+font-style: italic;
+}
+img{
+   
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+div#foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+ 
+
+</style>
+
+
+
+<body>
+  <header>
+      <h1 id="text">Execicio : 20</h1>
+  </header>
+
+  <section>
+      <div >
+        Numero:entre 1 e 100
+        <input type="number" name="fnum" id="fnum">
+        <input type="button" value="Adicionar" onclick="adicionar();">
+        <br><select name="flista" id="flista" size="10" ></select>
+        <br><input type="button" value="finalizar" onclick="finalizar();">
+      </div>
+      <div id="res">
+      
+      </div>
+  </section>
+  <footer>
+      <p>&copy; curso em video</p>
+  </footer>
+
+
+
+
+
+
+
+  <script>
+   
+
+        let num = document.getElementById('fnum');
+        let lista =document.getElementById('flista');
+        let res = document.getElementById('res');
+        let valores = [];
+        function isNumero(n){
+           if(Number(n) >=1 && Number(n)<=100){
+             return true;
+           }else {
+             return false;
+           }
+        }
+
+        function isLista(n,l){
+          if(l.indexOf(Number(n)!= -1)){
+            return true;
+          }else {
+            return false;
+          }
+
+
+        }
+        function adicionar(){
+          if(isNumero(num.value)  && !isLista(num.value,valores)){
+            valores.push(Number(num.value));
+
+            let item = document.createElement('option');
+            item.text="valor "+num.value+" adicionado";
+            lista.appendChild(item);
+            
+          }
+          else{
+            alert("Valor invalido ou já encontrado na lista")
+          }
+          num.value="";
+          num.focus();
+      }
+
+     function finalizar(){
+        if(valores.length ==0){
+        alert("Adicione valores antes de finalizar");
+
+      }
+      else{
+        let tot =valores.length;
+        res.innerHTML=""
+        let maior= valores[0];
+        let menor = valores[0];
+
+
+        res.innerHTML+= "<p>ao todo temos,"+tot+" números cadastrados </p>"
+        res.innerHTML+= "<p> O maior valor informado,foi"+maior+"</P>";
+          res.innerHTML+= "<p> O menor valor informado,foi"+menor+"</P>";
+      }
+    }
+  </script>
+
+
+
+</body>
+</html>
