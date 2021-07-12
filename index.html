@@ -8,20 +8,24 @@
     <script src="function.js"></script>
 <style>
     main{
-        margin: 50px auto;
+        margin: auto;
         text-align: center;
         background-color: beige;
     }
    h1{
        text-align: center;
-       color: red;
+       color: white;
    }
    a{
        color: black;
+       text-decoration: none;
        }
+           
 
-       li{
+
+       ul li{
            margin: 3px;
+           text-decoration: none !important;
        }
    a:active{
        color:yellow;
@@ -29,35 +33,63 @@
    a::selection{
        color: green;
    }
-   
+   .card{
+       margin: auto;
+       padding: 30px;
+       border-radius: 10px;
+       background-color: maroon;
+       color: white;
+       width: 200px;
+       border:2px solid transparent;
+       transition: .5s;
+
+   }
+   .card:hover{
+    padding: 30px;
+       border-radius: 10px;
+       background-color: transparent;
+       color: maroon;
+       width: 200px;
+       border:2px solid maroon;
+   }
+   header{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 30px;
+      height: 200px;
+       background-color: maroon;
+   }
 </style>
 </head>
 <body>
     <main>
-       <h1>Exercicios de javascript Curso em video</h1>
-         <ul><li><a href="exe001.html">Exercicio - 001 - olá,mundo</a></li>
-        <li><a href="exe002.html">Exercicio - 002 - tratamento de dados</a></li>
-        <li><a href="exe003.html">Exercicio - 003 - tratamento de dados 2</a></li>
-        <li><a href="exe004.html">Exercicio - 004 - tratamento de dados 3</a></li>
-        <li><a href="exe005.html">:star: Exercicio - 005 - Eventos DOM</a></li>
-        <li><a href="exe006.html">Exercicio - 006 - Eventos DOM parte 2</a></li>
-        <li><a href="exe007.html">Exercicio - 007 - Condiçôes</a></li>
-        <li><a href="exe008.html">Exercicio - 008 - Condiçôes</a></li>
-        <li><a href="exe009.html">Exercicio - 009 - Condiçôes</a></li>
-        <li><a href="exe010.html">Exercicio - 010 - Condiçôes</a></li>
-        <li><a href="exe011.html">Exercicio - 011 - Condiçôes</a></li>
-        <li><a href="exe012.html">Exercicio - 012 - Condiçôes</a></li>
-        <li><a href="exe013.html">Exercicio - 013 - Condiçôes</a></li>
-        <li><a href="exe014.html">:star: Exercicio - 014 - Condiçôes</a></li>
-        <li><a href="exe015.html">:star: Exercicio - 015 - Condiçôes</a></li>
-        <li><a href="exe016.html">Exercicio - 016 - Repetiçôes</a></li>
-        <li><a href="exe017.html">Exercicio - 017 - Repetiçôes</a></li>
-        <li><a href="exe018.html">Exercicio - 018 - variáveis compostas </a></li>
-        <li><a href="exe019.html">Exercicio - 019 - Funções </a></li>
-        <li><a href="exe020.html">Exercicio - 020 - Funções </a></li>
+       <header>
+           <h1>Exercicios de javascript Curso em video</h1>
+       </header>
+         <a href="exe001.html"><div class="card">Exercicio - 001 - olá,mundo</div></a> <br>
+       <a href="exe002.html"><div class="card">Exercicio - 002 - tratamento de dados</div></a> <br>
+       <a href="exe003.html"><div class="card">Exercicio - 003 - tratamento de dados 2</div></a> <br>
+       <a href="exe004.html"><div class="card">Exercicio - 004 - tratamento de dados 3</div></a> <br>
+      <a href="exe005.html"><div class="card">:star: Exercicio - 005 - Eventos DOM</div></a> <br>
+       <a href="exe006.html"><div class="card">Exercicio - 006 - Eventos DOM parte 2</div></a> <br>
+       <a href="exe007.html"><div class="card">Exercicio - 007 - Condiçôes</div></a> <br>
+        <a href="exe008.html"><div class="card">Exercicio - 008 - Condiçôes</div></a> <br>
+        <a href="exe009.html"><div class="card">Exercicio - 009 - Condiçôes</div></a> <br>
+        <a href="exe010.html"><div class="card">Exercicio - 010 - Condiçôes</div></a> <br>
+       <a href="exe011.html"><div class="card">Exercicio - 011 - Condiçôes</div></a><br>
+        <a href="exe012.html"><div class="card">Exercicio - 012 - Condiçôes</div></a><br>
+        <a href="exe013.html"><div class="card">Exercicio - 013 - Condiçôes</div></a> <br>
+        <a href="exe014.html"><div class="card">:star: Exercicio - 014 - Condiçôes</div></a> <br>
+     <a href="exe015.html"><div class="card">:star: Exercicio - 015 - Condiçôes</div></a> <br>
+      <a href="exe016.html"><div class="card">Exercicio - 016 - Repetiçôes</div></a> <br>
+   <a href="exe017.html"><div class="card">Exercicio - 017 - Repetiçôes</div></a> <br>
+       <a href="exe018.html"><div class="card">Exercicio - 018 - variáveis compostas</div> </a> <br>
+        <a href="exe019.html"><div class="card">Exercicio - 019 - Funções</div> </a> <br>
+        <a href="exe020.html"><div class="card">Exercicio - 020 - Funções</div> </a> <br>
 
 
-    </ul>
+    
 
     </main>
 </body>
